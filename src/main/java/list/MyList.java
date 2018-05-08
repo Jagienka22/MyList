@@ -53,6 +53,18 @@ public class MyList {
         return index == 0;
     }
 
+
+    public void addAll(MyList a){
+        int n = a.size();
+        for(int j = 0; j < n; j++){
+            add(a.get(j));
+        }
+    }
+
+    public int size() {
+        return index;
+    }
+
     @Override
     public String toString() {
         String wynik = "[";
@@ -67,4 +79,3 @@ public class MyList {
 }
 
 
-//usuwanie elementów z listy

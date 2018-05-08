@@ -49,6 +49,9 @@ public class App {
 
         javaList.addAll(javaList);
         System.out.println("tttt" + javaList);
+        System.out.println(mojaLista.size());
+        mojaLista.addAll(mojaLista);
+        System.out.println(mojaLista);
 
         System.out.println("empty : " + mojaLista.isEmpty());
         System.out.println(nowalista.isEmpty());
