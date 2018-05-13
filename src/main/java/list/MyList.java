@@ -4,7 +4,7 @@ package list;
  * Created by aga on 25.03.18.
  */
 public class MyList {
-    private int tablica[] = new int[100];
+    private int tablica[] = new int[3];
     private int index;
 
     public void add(int i) {
@@ -64,6 +64,7 @@ public class MyList {
     public int size() {
         return index;
     }
+
 
     @Override
     public String toString() {
