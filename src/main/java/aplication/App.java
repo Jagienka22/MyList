@@ -1,5 +1,6 @@
 package aplication;
 
+import list.MyLinkedList;
 import list.MyList;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.List;
 public class App {
 
     private static List<Integer> javaList;
-    private static MyList mojaLista;
+    private static MyLinkedList mojaLista;
     private static MyList nowalista;
 
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class App {
         //lista.add(5);
         //System.out.println(lista);
         javaList = new ArrayList<Integer>();
-        mojaLista = new MyList();
+        mojaLista = new MyLinkedList();
         nowalista = new MyList();
 
         dodaj(12);
@@ -30,9 +31,15 @@ public class App {
         dodaj(5);
         dodaj(1);
 
+
         System.out.println("Javowa lista: " + javaList);
         System.out.println("Moja lista: " + mojaLista);
 
+        mojaLista.add(1);
+        mojaLista.add(2);
+        System.out.println(mojaLista);
+
+        /*
         System.out.println(javaList.get(2));
         System.out.println(mojaLista.get(2));
 
@@ -62,6 +69,7 @@ public class App {
 
         System.out.println("indexOf: " + javaList.indexOf(9));
         System.out.println(mojaLista.indexOf(9));
+        */
     }
 
     private static void dodaj(int e) {
