@@ -86,7 +86,7 @@ public class MyLinkedList {
     }
 
     public boolean contains(int i) {
-        return false;
+        return indexOf(i)!=-1;
     }
 
     public void addAll(MyLinkedList lista2) {
