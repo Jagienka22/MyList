@@ -19,9 +19,19 @@ public class MyLinkedList {
 
     @Override
     public String toString() {
-        return "MyLinkedList{" +
-                "value=" + value +
-                '}';
+        MyLinkedList l = child;
+        String wynik = "[";
+
+        wynik += value + ", ";
+        for(int w = 1; w <size-1; w++){
+            wynik += l.value + ", ";
+            l = l.child;
+        }
+        if(size!=0){
+            wynik += l.value ;
+        }
+        wynik += "]";
+        return wynik;
     }
 
     public int get(int i) {
@@ -36,18 +46,32 @@ public class MyLinkedList {
     }
 
     public void remove(int i) {
-
+        if(i==0){
+            if(size !=1){
+                this.value = child.value;
+                child = child.child;
+            }else{
+                this.value = null;
+            }
+        }
+        if(i>=1){
+            MyLinkedList l = this;
+            for(int j = 0; j<i-1; j++){
+                l = l.child;
+            }
+            l.child = l.child.child;
+        }
+        size--;
     }
 
-    public int size() {
 
-        int i = 0;
-        return i;
+    public int size(){
+        return size;
     }
 
 
     public boolean isEmpty() {
-        return false;
+        return size == 0;
     }
 
     public int indexOf(int i) {
