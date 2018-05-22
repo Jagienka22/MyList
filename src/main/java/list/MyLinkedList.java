@@ -90,6 +90,9 @@ public class MyLinkedList {
     }
 
     public void addAll(MyLinkedList lista2) {
-
+       int n = lista2.size();
+        for(int j = 0; j < n; j++){
+            add(lista2.get(j));
+        }
     }
 }
