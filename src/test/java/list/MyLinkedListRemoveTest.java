@@ -3,7 +3,6 @@ package list;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
 
 /**
  * Created by aga on 22.05.18.
