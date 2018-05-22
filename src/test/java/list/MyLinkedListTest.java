@@ -77,6 +77,39 @@ public class MyLinkedListTest {
     }
 
     @Test
+    public void indexOfFirst() {
+        MyLinkedList nowalista;
+        nowalista = new MyLinkedList();
+        nowalista.add(12);
+        nowalista.add(2);
+        nowalista.add(4);
+        nowalista.add(7);
+        nowalista.add(9);
+        nowalista.add(5);
+        nowalista.add(1);
+
+        Assert.assertEquals(nowalista.indexOf(12), 0);
+    }
+
+    @Test
+    public void indexOfWithOneElement() {
+        MyLinkedList nowalista;
+        nowalista = new MyLinkedList();
+        nowalista.add(12);
+
+        Assert.assertEquals(nowalista.indexOf(12), 0);
+    }
+
+    @Test
+    public void indexOfUn() {
+        MyLinkedList nowalista;
+        nowalista = new MyLinkedList();
+        nowalista.add(12);
+
+        Assert.assertEquals(nowalista.indexOf(0), -1);
+    }
+
+    @Test
     public void containsTrue() {
         MyLinkedList nowalista;
         nowalista = new MyLinkedList();

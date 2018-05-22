@@ -105,6 +105,21 @@ public class MyListTest {
     }
 
     @Test
+    public void indexOfUn() {
+        MyList nowalista;
+        nowalista = new MyList();
+        nowalista.add(12);
+        nowalista.add(2);
+        nowalista.add(4);
+        nowalista.add(7);
+        nowalista.add(9);
+        nowalista.add(5);
+        nowalista.add(1);
+
+        Assert.assertEquals(nowalista.indexOf(0), -1);
+    }
+
+    @Test
     public void containsTrue() {
         MyList nowalista;
         nowalista = new MyList();

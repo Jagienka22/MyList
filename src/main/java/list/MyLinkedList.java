@@ -75,7 +75,14 @@ public class MyLinkedList {
     }
 
     public int indexOf(int i) {
-        return 0;
+        MyLinkedList l = this;
+        for(int j = 0; j<size; j++){
+            if(l.value == i){
+                return j;
+            }
+            l = l.child;
+        }
+        return -1;
     }
 
     public boolean contains(int i) {
